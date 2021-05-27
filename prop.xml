@@ -1,0 +1,92 @@
+
+<?xml version="1.0" encoding="UTF-8" ?>
+<Module>
+    <ModulePrefs title="__MSG_gh.gadget.sprint.burndown.title__"
+                 directory_title="__MSG_gh.gadget.sprint.burndown.title__"
+                 author="Atlassian" author_affiliation="Atlassian"
+                 author_location="Sydney, Australia"
+                 description="__MSG_gh.gadget.sprint.burndown.description__"
+                 thumbnail='https://bugbounty-spartez-software-w3.atlassian.net/s/sb53l8/b/24/58f13a28e9d79e97676dadcff44d2a54e04240f8/_/download/resources/com.pyxis.greenhopper.jira:greenhopper-gadget-rapid-view/images/gadgets/gh-sprint-burndown-preview.png'>
+        <Require feature="oauthpopup"/>
+        <OAuth><Service><Access url="https://bugbounty-spartez-software-w3.atlassian.net/plugins/servlet/oauth/access-token" method="POST" /><Request url="https://bugbounty-spartez-software-w3.atlassian.net/plugins/servlet/oauth/request-token" method="POST" /><Authorization url="https://bugbounty-spartez-software-w3.atlassian.net/plugins/servlet/oauth/authorize?oauth_callback=http%3A%2F%2Foauth.gmodules.com%2Fgadgets%2Foauthcallback" /></Service></OAuth>
+        <Require feature="minimessage"/>
+        <Require feature="setprefs"/>
+        <Require feature="views"/>
+        <Require feature="settitle"/>
+        <Require  feature="dynamic-height"/>
+        <Optional feature='auth-refresh' />
+        <Optional feature="atlassian.util"/>
+        <Optional feature="gadget-directory">
+            <Param name="categories">
+            	JIRA
+            	Wallboard
+            </Param>
+        </Optional>
+
+        <Locale messages="https://bugbounty-spartez-software-w3.atlassian.net/rest/gadgets/1.0/g/messagebundle/und/gadget.common%2Cgh.gadget"/><Locale lang="zh" country="CN" messages="https://bugbounty-spartez-software-w3.atlassian.net/rest/gadgets/1.0/g/messagebundle/zh_CN/gadget.common%2Cgh.gadget"/><Locale lang="cs" country="CZ" messages="https://bugbounty-spartez-software-w3.atlassian.net/rest/gadgets/1.0/g/messagebundle/cs_CZ/gadget.common%2Cgh.gadget"/><Locale lang="da" country="DK" messages="https://bugbounty-spartez-software-w3.atlassian.net/rest/gadgets/1.0/g/messagebundle/da_DK/gadget.common%2Cgh.gadget"/><Locale lang="nl" country="NL" messages="https://bugbounty-spartez-software-w3.atlassian.net/rest/gadgets/1.0/g/messagebundle/nl_NL/gadget.common%2Cgh.gadget"/><Locale lang="en" country="GB" messages="https://bugbounty-spartez-software-w3.atlassian.net/rest/gadgets/1.0/g/messagebundle/en_GB/gadget.common%2Cgh.gadget"/><Locale lang="en" country="US" messages="https://bugbounty-spartez-software-w3.atlassian.net/rest/gadgets/1.0/g/messagebundle/en_US/gadget.common%2Cgh.gadget"/><Locale lang="et" country="EE" messages="https://bugbounty-spartez-software-w3.atlassian.net/rest/gadgets/1.0/g/messagebundle/et_EE/gadget.common%2Cgh.gadget"/><Locale lang="fi" country="FI" messages="https://bugbounty-spartez-software-w3.atlassian.net/rest/gadgets/1.0/g/messagebundle/fi_FI/gadget.common%2Cgh.gadget"/><Locale lang="fr" country="FR" messages="https://bugbounty-spartez-software-w3.atlassian.net/rest/gadgets/1.0/g/messagebundle/fr_FR/gadget.common%2Cgh.gadget"/><Locale lang="de" country="DE" messages="https://bugbounty-spartez-software-w3.atlassian.net/rest/gadgets/1.0/g/messagebundle/de_DE/gadget.common%2Cgh.gadget"/><Locale lang="hu" country="HU" messages="https://bugbounty-spartez-software-w3.atlassian.net/rest/gadgets/1.0/g/messagebundle/hu_HU/gadget.common%2Cgh.gadget"/><Locale lang="is" country="IS" messages="https://bugbounty-spartez-software-w3.atlassian.net/rest/gadgets/1.0/g/messagebundle/is_IS/gadget.common%2Cgh.gadget"/><Locale lang="it" country="IT" messages="https://bugbounty-spartez-software-w3.atlassian.net/rest/gadgets/1.0/g/messagebundle/it_IT/gadget.common%2Cgh.gadget"/><Locale lang="ja" country="JP" messages="https://bugbounty-spartez-software-w3.atlassian.net/rest/gadgets/1.0/g/messagebundle/ja_JP/gadget.common%2Cgh.gadget"/><Locale lang="ko" country="KR" messages="https://bugbounty-spartez-software-w3.atlassian.net/rest/gadgets/1.0/g/messagebundle/ko_KR/gadget.common%2Cgh.gadget"/><Locale lang="no" country="NO" messages="https://bugbounty-spartez-software-w3.atlassian.net/rest/gadgets/1.0/g/messagebundle/no_NO/gadget.common%2Cgh.gadget"/><Locale lang="pl" country="PL" messages="https://bugbounty-spartez-software-w3.atlassian.net/rest/gadgets/1.0/g/messagebundle/pl_PL/gadget.common%2Cgh.gadget"/><Locale lang="pt" country="BR" messages="https://bugbounty-spartez-software-w3.atlassian.net/rest/gadgets/1.0/g/messagebundle/pt_BR/gadget.common%2Cgh.gadget"/><Locale lang="pt" country="PT" messages="https://bugbounty-spartez-software-w3.atlassian.net/rest/gadgets/1.0/g/messagebundle/pt_PT/gadget.common%2Cgh.gadget"/><Locale lang="ro" country="RO" messages="https://bugbounty-spartez-software-w3.atlassian.net/rest/gadgets/1.0/g/messagebundle/ro_RO/gadget.common%2Cgh.gadget"/><Locale lang="ru" country="RU" messages="https://bugbounty-spartez-software-w3.atlassian.net/rest/gadgets/1.0/g/messagebundle/ru_RU/gadget.common%2Cgh.gadget"/><Locale lang="sk" country="SK" messages="https://bugbounty-spartez-software-w3.atlassian.net/rest/gadgets/1.0/g/messagebundle/sk_SK/gadget.common%2Cgh.gadget"/><Locale lang="es" country="ES" messages="https://bugbounty-spartez-software-w3.atlassian.net/rest/gadgets/1.0/g/messagebundle/es_ES/gadget.common%2Cgh.gadget"/><Locale lang="sv" country="SE" messages="https://bugbounty-spartez-software-w3.atlassian.net/rest/gadgets/1.0/g/messagebundle/sv_SE/gadget.common%2Cgh.gadget"/><Locale lang="uk" country="UA" messages="https://bugbounty-spartez-software-w3.atlassian.net/rest/gadgets/1.0/g/messagebundle/uk_UA/gadget.common%2Cgh.gadget"/><Locale lang="vi" country="VN" messages="https://bugbounty-spartez-software-w3.atlassian.net/rest/gadgets/1.0/g/messagebundle/vi_VN/gadget.common%2Cgh.gadget"/>
+
+    </ModulePrefs>
+
+    <UserPref name="isConfigured" datatype="hidden" default_value="false"/>
+    <UserPref name="rapidViewId" datatype="hidden"/>
+    <UserPref name="showRapidViewName" datatype="hidden" default_value="false" />
+    <UserPref name="sprintId" datatype="hidden"/>
+    <UserPref name="showSprintName" datatype="hidden" default_value="false" />
+    <UserPref name="refresh" datatype="hidden" default_value="false"/>
+
+    <Content type="html" view="home,default,wallboard">
+        <![CDATA[
+        
+        <script>
+window.WRM=window.WRM||{};window.WRM._unparsedData=window.WRM._unparsedData||{};window.WRM._unparsedErrors=window.WRM._unparsedErrors||{};
+WRM._unparsedData["com.atlassian.plugins.atlassian-plugins-webresource-plugin:context-path.context-path"]="\"\"";
+WRM._unparsedData["com.atlassian.gadgets.publisher:ajs-gadgets-debug.is-dev-mode"]="false";
+WRM._unparsedData["jira.webresources:dateFormatProvider.dateFormat"]="{\"meridiem\":[\"AM\",\"PM\"],\"eras\":[\"BC\",\"AD\"],\"months\":[\"January\",\"February\",\"March\",\"April\",\"May\",\"June\",\"July\",\"August\",\"September\",\"October\",\"November\",\"December\"],\"monthsShort\":[\"Jan\",\"Feb\",\"Mar\",\"Apr\",\"May\",\"Jun\",\"Jul\",\"Aug\",\"Sep\",\"Oct\",\"Nov\",\"Dec\"],\"weekdaysShort\":[\"Sun\",\"Mon\",\"Tue\",\"Wed\",\"Thu\",\"Fri\",\"Sat\"],\"weekdays\":[\"Sunday\",\"Monday\",\"Tuesday\",\"Wednesday\",\"Thursday\",\"Friday\",\"Saturday\"]}";
+WRM._unparsedData["jira.webresources:feature-flags.feature-flag-data"]="{\"enabled-feature-keys\":[\"com.atlassian.jira.projects.issuenavigator\",\"connect.no-applinks\",\"nps.survey.inline.dialog\",\"atlassian.aui.raphael.disabled\",\"com.atlassian.jira.projects.ProjectCentricNavigation.Switch\"],\"feature-flag-states\":{\"jira.feature.flag.board.issue.modal.labs\":true,\"com.atlassian.jira.plugins.mail.internal\":false,\"com.atlassian.jira.feature.flag.for.TestFeatureFlagResource\":false,\"jira.feature.rest.single.step.avatar.upload\":true,\"jira.ondemand.maintain.trusted.apps\":true}}";
+WRM._unparsedData["com.atlassian.plugins.atlassian-plugins-webresource-rest:curl.cross-origin-resources"]="false";
+WRM._unparsedData["com.atlassian.jira.jira-client-analytics-plugin:analytics-context-provider.client-analytic-descriptors"]="{\"analyticsResource\":{\"jira-core\":{\"events\":{\"issue.comment.added\":{\"trigger\":\"click #issue-comment-add-submit\",\"properties\":{\"comment-length\":\"value.length #issue-comment-add #comment\"}}}}},\"tenantId\":\"7cad385e-1735-4109-9c38-db8ecec9ee09\",\"env\":\"prod\"}";
+WRM._unparsedData["jira.webresources:default-comment-security-level.DefaultCommentSecurityLevelHelpLink"]="{\"extraClasses\":\"default-comment-level-help\",\"title\":\"Commenting on an Issue\",\"url\":\"https://confluence.atlassian.com/display/JIRACORECLOUD/Editing+and+collaborating+on+issues#Editingandcollaboratingonissues-addcommentsCommentingonissues\",\"isLocal\":false}";
+WRM._unparsedData["com.atlassian.jira.plugins.jira-dnd-attachment-plugin:dnd-issue-drop-zone.thumbnail-mime-types"]="\"image/vnd.wap.wbmp,image/png,image/x-png,image/jpeg,image/bmp,image/gif\"";
+WRM._unparsedData["com.atlassian.jira.plugins.jira-dnd-attachment-plugin:dnd-issue-drop-zone.upload-limit"]="\"1073741824\"";
+if(window.WRM._dataArrived)window.WRM._dataArrived();</script>
+<link type="text/css" rel="stylesheet" href="//d2m4riqu1jtjxe.cloudfront.net/atl-vertigo--shard-jira-prod-eu-24--3--jres.atlassian.net/s/d41d8cd98f00b204e9800998ecf8427e-CDN/sb53l8/b/24/5446b9d53ebb3e6543b5774ce8f237e1/_/download/contextbatch/css/com.atlassian.jira.gadgets:common,com.pyxis.greenhopper.jira:gh-gadget-sprint-burndown-resources/batch.css?relative-url=true" data-wrm-key="com.atlassian.jira.gadgets:common,com.pyxis.greenhopper.jira:gh-gadget-sprint-burndown-resources" data-wrm-batch-type="context" media="all">
+<script type="text/javascript" src="//d2m4riqu1jtjxe.cloudfront.net/atl-vertigo--shard-jira-prod-eu-24--3--jres.atlassian.net/s/d41d8cd98f00b204e9800998ecf8427e-CDN/sb53l8/b/24/72de43f916dc112e09e6d796ec5e645e/_/download/contextbatch/js/com.atlassian.jira.gadgets:common,com.pyxis.greenhopper.jira:gh-gadget-sprint-burndown-resources/batch.js?locale=en-US" data-wrm-key="com.atlassian.jira.gadgets:common,com.pyxis.greenhopper.jira:gh-gadget-sprint-burndown-resources" data-wrm-batch-type="context" data-initially-rendered></script>
+<!--[if IE]>
+<script type="text/javascript" src="//d2m4riqu1jtjxe.cloudfront.net/atl-vertigo--shard-jira-prod-eu-24--3--jres.atlassian.net/s/d41d8cd98f00b204e9800998ecf8427e-CDN/sb53l8/b/24/72de43f916dc112e09e6d796ec5e645e/_/download/contextbatch/js/com.atlassian.jira.gadgets:common,com.pyxis.greenhopper.jira:gh-gadget-sprint-burndown-resources/batch.js?ieonly=true&amp;locale=en-US" data-wrm-key="com.atlassian.jira.gadgets:common,com.pyxis.greenhopper.jira:gh-gadget-sprint-burndown-resources" data-wrm-batch-type="context" data-initially-rendered></script>
+<![endif]-->
+<script type="text/javascript" src="//d2m4riqu1jtjxe.cloudfront.net/atl-vertigo--shard-jira-prod-eu-24--3--jres.atlassian.net/s/d41d8cd98f00b204e9800998ecf8427e-CDN/sb53l8/b/24/2e952394bb97aa97ac385ed7f634a3f8/_/download/contextbatch/js/com.pyxis.greenhopper.jira:gh-gadget-unsupported-browser/batch.js?locale=en-US" data-wrm-key="com.pyxis.greenhopper.jira:gh-gadget-unsupported-browser" data-wrm-batch-type="context" data-initially-rendered></script>
+<script type="text/javascript" src="https://bugbounty-spartez-software-w3.atlassian.net/s/d41d8cd98f00b204e9800998ecf8427e-T/sb53l8/b/24/fc18c42506c8d6779116a136db297d01/_/download/batch/com.pyxis.greenhopper.jira:gh-rapid-old-underscore-lib/com.pyxis.greenhopper.jira:gh-rapid-old-underscore-lib.js" data-wrm-key="com.pyxis.greenhopper.jira:gh-rapid-old-underscore-lib" data-wrm-batch-type="resource" data-initially-rendered></script>
+
+        <script type="text/javascript">
+        	GADGET.preInit("https://bugbounty-spartez-software-w3.atlassian.net");
+            var gadget = AJS.Gadget({
+			    baseUrl: "https://bugbounty-spartez-software-w3.atlassian.net",
+			    useOauth: "/rest/gadget/1.0/currentUser",
+			    config: {
+			        descriptor: function (args)
+			        {
+						return GADGET.descriptor(this, args, "https://bugbounty-spartez-software-w3.atlassian.net");
+			        },
+			        args: GADGET.descriptorArgs("https://bugbounty-spartez-software-w3.atlassian.net")
+			    },
+			    view: {
+			        enableReload: true,
+			        onResizeReload: true,
+			        onResizeAdjustHeight: true,
+			        template: function (args)
+			        {
+			    		var UnsupportedBrowser = require('jira-agile/gadgets/unsupported-browser');
+                        if (!UnsupportedBrowser.showMessageIfUnsupported(this)) {
+                            GADGET.template(this, args, "https://bugbounty-spartez-software-w3.atlassian.net")
+                        } else {
+                            gadget.reportMetricsToDashboard("gadget-rendering-finished", "View");
+                        }
+			        },
+			        args: GADGET.templateArgs("https://bugbounty-spartez-software-w3.atlassian.net")
+			    }
+			});
+        </script>
+        ]]>
+    </Content>
+
+</Module>
